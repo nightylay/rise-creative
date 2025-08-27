@@ -365,6 +365,7 @@ a {
 .hero {
   padding-top: 44px;
   padding-bottom: 62px;
+  min-height: calc(100vh - var(--header-height));
 }
 
 .hero__content {
