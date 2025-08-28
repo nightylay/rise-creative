@@ -244,10 +244,14 @@ svg * {
 
   --height-button: 50px;
 }
+.wrapper {
+  background: var(--color-dark-alternate) url('./images/bg-lines.png') no-repeat;
+  background-position: -450px;
+  object-fit: cover;
+}
 
 body {
   font-family: var(--font-family-base);
-  background-color: var(--color-dark-alternate);
 }
 
 body.is-lock {
@@ -508,7 +512,7 @@ a {
   width: 202px;
   height: 235px;
   position: absolute;
-  top: 300px;
+  top: 250px;
   left: -100px;
   z-index: 3;
   background: url('./images/statistics.png') center/contain no-repeat;
