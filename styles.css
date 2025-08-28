@@ -244,7 +244,7 @@ svg * {
 
   --height-button: 50px;
 }
-.wrapper {
+.main-section {
   background: var(--color-dark-alternate) url('./images/bg-lines.png') no-repeat;
   background-position: -450px;
   object-fit: cover;
