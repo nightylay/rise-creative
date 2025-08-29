@@ -165,10 +165,6 @@ body {
     (когда, например, нужно будет "прижать" футер к низу сайта)
    */
   min-height: 100%;
-  /**
-    Унифицированный интерлиньяж
-   */
-  line-height: 1.5;
 }
 
 /**
@@ -225,6 +221,7 @@ svg * {
   --color-light: #f3f4f6;
   --color-light-alternate: #f5f5f5;
   --color-yellow: #f0e714;
+  --color-light-yellow: rgba(240, 231, 20, 0.2);
   --color-gray: #555c68;
   --color-gray-header: #bab9b9;
 
@@ -243,11 +240,8 @@ svg * {
   --border-radius: 100px;
 
   --height-button: 50px;
-}
-.main-section {
-  background: var(--color-dark-alternate) url('./images/bg-lines.png') no-repeat;
-  background-position: -450px;
-  object-fit: cover;
+
+  --padding-block-y: 140px;
 }
 
 body {
@@ -268,9 +262,56 @@ a {
   padding-inline: var(--container-padding-x);
 }
 
+.section {
+  padding-block: var(--padding-block-y);
+}
+
+.main-section {
+  background: var(--color-dark-alternate) url('./images/bg-lines.png') no-repeat;
+  background-position: -450px;
+  object-fit: cover;
+}
+
 .title {
-  font-size: clamp(24px, 3.05vw, 44px);
+  color: var(--color-dark);
+  background-color: var(--color-light-yellow);
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  border-radius: var(--border-radius);
+}
+
+.subtitle {
+  font-family: var(--font-family-base);
+  font-size: 44px;
   font-weight: 600;
+  line-height: 1.27;
+  color: var(--color-dark);
+}
+
+.description {
+  color: var(--color-gray);
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.title,
+.description {
+  font-family: var(--font-family-accent);
+  font-weight: 400;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
 }
 
 .button {
@@ -430,13 +471,13 @@ a {
   padding-left: 36px;
 }
 
-.hero__button-start::after {
+.hero__button-start.icon--black-arrow::after {
   content: '';
   height: 100%;
   aspect-ratio: 1;
   position: absolute;
   right: 0;
-  background: url('./icons/arrow-right.svg') left / 40% no-repeat;
+  background: url('./icons/arrow-right_black.svg') left / 40% no-repeat;
 }
 
 .hero__actions {
@@ -531,6 +572,64 @@ a {
   fill: var(--color-gray);
 }
 
+.about-body {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.about__info-body {
+  padding-block: 54px;
+}
+
+.about__image-block {
+  flex-shrink: 0;
+}
+
+.about__info-title:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.about__info-subtitle:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.about__info-description:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.about__info-button {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  height: 46px;
+  padding-right: 55px;
+  padding-left: 33px;
+}
+
+.about__info-button.--button-black {
+  background-color: var(--color-dark);
+  color: var(--color-yellow);
+}
+
+.about__info-button.icon--yellow-arrow::after {
+  content: '';
+  height: 100%;
+  aspect-ratio: 1;
+  position: absolute;
+  right: 0;
+  background: url('./icons/arrow-right_yellow.svg') left / 40% no-repeat;
+}
+
+.about__info-button:hover {
+  background-color: var(--color-yellow);
+  color: var(--color-dark);
+}
+
+.about__info-button.icon--yellow-arrow:hover::after {
+  background: url('./icons/arrow-right_black.svg') left / 40% no-repeat;
+}
+
 @media (max-width: 1300px) {
   .hero__partners {
     scroll-snap-type: x mandatory;
@@ -552,6 +651,9 @@ a {
 }
 
 @media (max-width: 1280px) {
+  .section {
+    padding-block: 80px;
+  }
   .hero__content {
     flex-direction: column;
     justify-content: center;
@@ -582,6 +684,16 @@ a {
 
   .hero__banner-image {
     display: none;
+  }
+}
+
+@media (max-width: 1060px) {
+  .about__info-body {
+    padding-block: 0px;
+  }
+  .about-body {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
@@ -684,8 +796,14 @@ a {
 }
 
 @media (max-width: 760px) {
+  .section {
+    padding-block: 40px;
+  }
   .hero__description::after {
     display: none;
+  }
+  .about__info-description:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
