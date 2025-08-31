@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Rise Creative</title>
   </head>
   <body>
@@ -427,8 +428,46 @@
             </div>
           </div>
         </section>
+
+        <section class="cases section">
+          <h2 class="visually-hidden">Our cases</h2>
+          <div class="cases-container container">
+            <div class="cases__body">
+              <div class="cases__info">
+                <div class="cases__info-body">
+                  <div class="cases__info-header">
+                    <div class="cases__info-header-inner">
+                      <h3 class="cases__info-title title">Ready To Use</h3>
+                      <div class="cases__info-subtitle subtitle">Elegant And Impressive Inner Pages</div>
+                    </div>
+                    <div class="cases__slider-buttons">
+                      <div class="swiper-button-prev swiper-button"></div>
+                      <div class="swiper-button-next swiper-button"></div>
+                    </div>
+                  </div>
+
+                  <div class="cases__slider">
+                    <div class="swiper mySwiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img src="./images/cases/1.jpg" class="services__services-image" alt="Process icon" width="510" height="641" loading="lazy" />
+                        </div>
+                        <div class="swiper-slide"><img src="./images/cases/2.jpg" class="services__services-image" alt="Process icon" width="510" height="641" loading="lazy" /></div>
+                        <div class="swiper-slide"><img src="./images/cases/3.jpg" class="services__services-image" alt="Process icon" width="510" height="641" loading="lazy" /></div>
+                      </div>
+
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./scripts/burger-menu.js" defer></script>
+    <script src="./scripts/slider.js" defer></script>
   </body>
 </html>
