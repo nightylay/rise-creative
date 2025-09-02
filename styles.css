@@ -263,6 +263,13 @@ a {
   padding-inline: var(--container-padding-x);
 }
 
+.container-wide {
+  --container-wide-width: 1780px;
+  max-width: calc(var(--container-wide-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
 .section {
   overflow: hidden;
 }
@@ -801,7 +808,7 @@ a {
   height: 100%;
 }
 
-.swiper-slide {
+.slide-case {
   max-width: 510px;
 }
 
@@ -845,6 +852,79 @@ a {
 
 .swiper-slide__case-link:hover {
   color: var(--color-gray);
+}
+
+.testimonial__info-header-inner {
+  text-align: center;
+}
+
+.slide-review {
+  text-align: center;
+  border: 1px solid black;
+}
+
+.slide-review__body {
+  padding: 36px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-review__image:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.slide-review__name {
+  font-family: var(--font-family-base);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.71;
+  color: #000000;
+}
+
+.slide-review__name:not(:last-child),
+.slide-review__position:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.slide-review__position {
+  font-family: var(--font-family-accent);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #8791a0;
+}
+
+.slide-review__rating {
+  display: flex;
+}
+
+.slide-review__rating-star-image {
+  width: 16px;
+  aspect-ratio: 1;
+}
+
+.slide-review__rating-star-image *[fill] {
+  fill: #f37825;
+}
+
+.slide-review__text {
+  font-family: var(--font-family-accent);
+  font-weight: 500;
+  line-height: 1.87;
+  color: #555c68;
+}
+
+/* Стили для центрального слайда */
+.slide-review.swiper-slide-active {
+  box-shadow: 0 25px 32px 0 rgba(67, 67, 67, 0.14);
+  border-radius: 10px;
+}
+
+.testimonial-swiper {
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 1400px) {
@@ -1047,7 +1127,7 @@ a {
   .services__services-list {
     grid-template-columns: repeat(2, 1fr);
   }
-  .swiper-slide {
+  .slide-case {
     max-width: 100%;
   }
 }

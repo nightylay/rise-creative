@@ -1,4 +1,4 @@
-var swiper = new Swiper(".mySwiper", {
+var swiperCases = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 20,
   navigation: {
@@ -11,4 +11,15 @@ var swiper = new Swiper(".mySwiper", {
       spaceBetween: 20
     },
   }
+});
+
+var swiperReviews = new Swiper(".swiperReviews", {
+  slidesPerView: 3,
+  spaceBetween: 10,
+  centeredSlides: true, // Центрирование слайдов
+  loop: true, // Бесконечная прокрутка (опционально)
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 });
