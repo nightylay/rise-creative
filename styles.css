@@ -939,10 +939,19 @@ a {
 .slide-review__text:before {
   content: '';
   position: absolute;
-  left: -25px;
+  left: -30px;
   width: 28px;
   height: 20px;
   background: url('./icons/comment-icon.svg') left/contain no-repeat;
+}
+
+.slide-review__text:after {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 20px;
+  background: url('./icons/comment-icon.svg') right/contain no-repeat;
+  transform: scale(-1);
 }
 
 /* Стили для центрального слайда */

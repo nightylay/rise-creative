@@ -16,6 +16,7 @@ var swiperCases = new Swiper(".mySwiper", {
 var swiperReviews = new Swiper(".swiperReviews", {
   slidesPerView: 1,
   spaceBetween: 10,
+  grabCursor: true,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false
