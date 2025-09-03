@@ -14,12 +14,40 @@ var swiperCases = new Swiper(".mySwiper", {
 });
 
 var swiperReviews = new Swiper(".swiperReviews", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 10,
-  centeredSlides: true, // Центрирование слайдов
-  loop: true, // Бесконечная прокрутка (опционально)
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
+  breakpoints: {
+    890: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    1280: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    }
+  },
+  on: {
+    slideChange: function () {
+      // Добавляем/убираем классы для стилизации
+      const slides = this.slides;
+      slides.forEach(slide => slide.classList.remove('centered'));
+
+      // Находим "центральный" слайд (второй из видимых)
+      if (slides[this.activeIndex + 1]) {
+        slides[this.activeIndex + 1].classList.add('centered');
+      }
+    }
+  }
 });
+
+setTimeout(() => {
+  swiperReviews.emit('slideChange');
+}, 100);
