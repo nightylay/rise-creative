@@ -4,10 +4,8 @@ const headerActions = document.getElementById('header-actions')
 
 const observer = new ResizeObserver(entries => {
   for (let entry of entries) {
-    console.log(entry)
     let { width } = entry.contentRect
     const isInMenu = headerActions.parentNode === mobileMenu;
-    console.log(width)
     if (width <= 890) {
       if (!isInMenu) {
         mobileMenu.insertAdjacentElement('beforeend', headerActions);
