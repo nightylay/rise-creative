@@ -16,10 +16,10 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="main-section">
-        <header class="header">
+      <div id="main-section" class="main-section">
+        <header id="header" class="header">
           <div class="header__inner container">
-            <a href="/" class="header__logo logo">
+            <a href="#" class="header__logo logo">
               <img
                 src="./icons/logo.svg"
                 alt="Logo"
@@ -32,16 +32,22 @@
                   <a href="/" class="header__menu-link">Home</a>
                 </li>
                 <li class="header__menu-item">
-                  <a href="/" class="header__menu-link">Project</a>
+                  <a data-goto=".cases" href="/" class="header__menu-link"
+                    >Project</a
+                  >
                 </li>
                 <li class="header__menu-item">
-                  <a href="/" class="header__menu-link">About</a>
+                  <a data-goto=".about" href="#" class="header__menu-link"
+                    >About</a
+                  >
                 </li>
                 <li class="header__menu-item">
                   <a href="/" class="header__menu-link">Blog</a>
                 </li>
                 <li class="header__menu-item">
-                  <a href="/" class="header__menu-link">Contact</a>
+                  <a data-goto=".contacts" href="/" class="header__menu-link"
+                    >Contact</a
+                  >
                 </li>
               </ul>
             </nav>
@@ -529,7 +535,7 @@
                           <img
                             src="./images/services/1.svg"
                             class="services__services-image"
-                            alt="Process icon"
+                            alt="Product Management"
                             width="58"
                             height="58"
                             loading="lazy"
@@ -550,7 +556,7 @@
                           <img
                             src="./images/services/2.svg"
                             class="services__services-image"
-                            alt="Process icon"
+                            alt="Web & Mobile Development"
                             width="58"
                             height="58"
                             loading="lazy"
@@ -571,7 +577,7 @@
                           <img
                             src="./images/services/3.svg"
                             class="services__services-image"
-                            alt="Process icon"
+                            alt="Brochures & Flyers"
                             width="58"
                             height="58"
                             loading="lazy"
@@ -594,7 +600,7 @@
                           <img
                             src="./images/services/4.svg"
                             class="services__services-image"
-                            alt="Process icon"
+                            alt="Logo & name cards"
                             width="58"
                             height="58"
                             loading="lazy"
@@ -615,7 +621,7 @@
                           <img
                             src="./images/services/5.svg"
                             class="services__services-image"
-                            alt="Process icon"
+                            alt="Marketing & Communication"
                             width="58"
                             height="58"
                             loading="lazy"
@@ -636,7 +642,7 @@
                           <img
                             src="./images/services/6.svg"
                             class="services__services-image"
-                            alt="Process icon"
+                            alt="Business Development"
                             width="58"
                             height="58"
                             loading="lazy"
@@ -657,7 +663,7 @@
                           <img
                             src="./images/services/7.svg"
                             class="services__services-image"
-                            alt="Process icon"
+                            alt="Human Resources"
                             width="58"
                             height="58"
                             loading="lazy"
@@ -678,7 +684,7 @@
                           <img
                             src="./images/services/8.svg"
                             class="services__services-image"
-                            alt="Process icon"
+                            alt="Infographics & Illustrations"
                             width="58"
                             height="58"
                             loading="lazy"
@@ -790,7 +796,7 @@
                             <img
                               src="./images/cases/1.jpg"
                               class="services__services-image"
-                              alt="Process icon"
+                              alt="Hotel Booking Website"
                               width="510"
                               height="641"
                               loading="lazy"
@@ -829,7 +835,7 @@
                             <img
                               src="./images/cases/2.jpg"
                               class="services__services-image"
-                              alt="Process icon"
+                              alt="UI/UX App Design"
                               width="510"
                               height="641"
                               loading="lazy"
@@ -868,7 +874,7 @@
                             <img
                               src="./images/cases/3.jpg"
                               class="services__services-image"
-                              alt="Process icon"
+                              alt="Ceramic E-commerce Landing Page"
                               width="510"
                               height="641"
                               loading="lazy"
@@ -907,7 +913,7 @@
                             <img
                               src="./images/cases/2.jpg"
                               class="services__services-image"
-                              alt="Process icon"
+                              alt="UI/UX App Design"
                               width="510"
                               height="641"
                               loading="lazy"
@@ -946,7 +952,7 @@
                             <img
                               src="./images/cases/3.jpg"
                               class="services__services-image"
-                              alt="Process icon"
+                              alt="Ceramic E-commerce Landing Page"
                               width="510"
                               height="641"
                               loading="lazy"
@@ -1023,44 +1029,47 @@
                                 loading="lazy"
                               />
                             </div>
-                            <div class="slide-review__name">
-                              Brooklyn Simmons
+                            <div class="slide-review__header">
+                              <div class="slide-review__name">
+                                Brooklyn Simmons
+                              </div>
+                              <div class="slide-review__position">
+                                Co-Founder and CEO, Snapdeal
+                              </div>
+                              <div class="slide-review__rating">
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                              </div>
                             </div>
-                            <div class="slide-review__position">
-                              Co-Founder and CEO, Snapdeal
-                            </div>
-                            <div class="slide-review__rating">
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                            </div>
+
                             <div class="slide-review__text">
                               Amet minim mollit non deserunt ullamco est sit
                               aliqua dolor do amet sint. Velit officia consequat
@@ -1075,48 +1084,51 @@
                             <div class="slide-review__image">
                               <img
                                 src="./images/reviews/3.png"
-                                alt="Woman in black glasses"
+                                alt="Man on blue background"
                                 width="60"
                                 height="60"
                                 loading="lazy"
                               />
                             </div>
-                            <div class="slide-review__name">Jacob Jones</div>
-                            <div class="slide-review__position">
-                              Marketing Coordinator
+                            <div class="slide-review__header">
+                              <div class="slide-review__name">Jacob Jones</div>
+                              <div class="slide-review__position">
+                                Marketing Coordinator
+                              </div>
+                              <div class="slide-review__rating">
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                              </div>
                             </div>
-                            <div class="slide-review__rating">
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                            </div>
+
                             <div class="slide-review__text">
                               Amet minim mollit non deserunt ullamco est sit
                               aliqua dolor do amet sint. Velit officia consequat
@@ -1138,44 +1150,47 @@
                                 loading="lazy"
                               />
                             </div>
-                            <div class="slide-review__name">
-                              Brooklyn Simmons
+                            <div class="slide-review__header">
+                              <div class="slide-review__name">
+                                Brooklyn Simmons
+                              </div>
+                              <div class="slide-review__position">
+                                Co-Founder and CEO, Snapdeal
+                              </div>
+                              <div class="slide-review__rating">
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                              </div>
                             </div>
-                            <div class="slide-review__position">
-                              Co-Founder and CEO, Snapdeal
-                            </div>
-                            <div class="slide-review__rating">
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                            </div>
+
                             <div class="slide-review__text">
                               Amet minim mollit non deserunt ullamco est sit
                               aliqua dolor do amet sint. Velit officia consequat
@@ -1190,50 +1205,54 @@
                             <div class="slide-review__image">
                               <img
                                 src="./images/reviews/2.png"
-                                alt="Woman in black glasses"
+                                alt="Woman on red background"
                                 width="60"
                                 height="60"
                                 loading="lazy"
                               />
                             </div>
-                            <div class="slide-review__name">
-                              Brooklyn Simmons
+
+                            <div class="slide-review__header">
+                              <div class="slide-review__name">
+                                Brooklyn Simmons
+                              </div>
+                              <div class="slide-review__position">
+                                Co-Founder and CEO, Snapdeal
+                              </div>
+                              <div class="slide-review__rating">
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                              </div>
                             </div>
-                            <div class="slide-review__position">
-                              Co-Founder and CEO, Snapdeal
-                            </div>
-                            <div class="slide-review__rating">
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                            </div>
+
                             <div class="slide-review__text">
                               Amet minim mollit non deserunt ullamco est sit
                               aliqua dolor do amet sint. Velit officia consequat
@@ -1248,48 +1267,51 @@
                             <div class="slide-review__image">
                               <img
                                 src="./images/reviews/3.png"
-                                alt="Woman in black glasses"
+                                alt="Man on blue background"
                                 width="60"
                                 height="60"
                                 loading="lazy"
                               />
                             </div>
-                            <div class="slide-review__name">Jacob Jones</div>
-                            <div class="slide-review__position">
-                              Marketing Coordinator
+                            <div class="slide-review__header">
+                              <div class="slide-review__name">Jacob Jones</div>
+                              <div class="slide-review__position">
+                                Marketing Coordinator
+                              </div>
+                              <div class="slide-review__rating">
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                              </div>
                             </div>
-                            <div class="slide-review__rating">
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                            </div>
+
                             <div class="slide-review__text">
                               Amet minim mollit non deserunt ullamco est sit
                               aliqua dolor do amet sint. Velit officia consequat
@@ -1310,44 +1332,47 @@
                                 loading="lazy"
                               />
                             </div>
-                            <div class="slide-review__name">
-                              Brooklyn Simmons
+                            <div class="slide-review__header">
+                              <div class="slide-review__name">
+                                Brooklyn Simmons
+                              </div>
+                              <div class="slide-review__position">
+                                Co-Founder and CEO, Snapdeal
+                              </div>
+                              <div class="slide-review__rating">
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                                <img
+                                  src="./icons/star-review.svg"
+                                  width="16"
+                                  height="16"
+                                  loading="lazy"
+                                />
+                              </div>
                             </div>
-                            <div class="slide-review__position">
-                              Co-Founder and CEO, Snapdeal
-                            </div>
-                            <div class="slide-review__rating">
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                              <img
-                                src="./icons/star-review.svg"
-                                width="16"
-                                height="16"
-                                loading="lazy"
-                              />
-                            </div>
+
                             <div class="slide-review__text">
                               Amet minim mollit non deserunt ullamco est sit
                               aliqua dolor do amet sint. Velit officia consequat
@@ -1387,7 +1412,7 @@
                         <div class="contacts__info-item-icon">
                           <img
                             src="./icons/contacts/address.svg"
-                            alt=""
+                            alt="Address icon"
                             width="14"
                             height="14"
                             loading="lazy"
@@ -1401,7 +1426,7 @@
                         <div class="contacts__info-item-icon">
                           <img
                             src="./icons/contacts/phone.svg"
-                            alt=""
+                            alt="Phone icon"
                             width="14"
                             height="14"
                             loading="lazy"
@@ -1415,7 +1440,7 @@
                         <div class="contacts__info-item-icon">
                           <img
                             src="./icons/contacts/email.svg"
-                            alt=""
+                            alt="Email icon"
                             width="14"
                             height="14"
                             loading="lazy"
@@ -1430,109 +1455,106 @@
                 </div>
               </div>
 
-              <div class="contacts__form">
-                <form
-                  id="contactsForm"
-                  action="#"
-                  class="contacts__contacts-form contacts-form"
-                  method="post"
-                  data-js-form
-                  novalidate
-                >
-                  <div class="contacts__form-body">
-                    <div class="contacts__form-field-block">
-                      <input
-                        class="field__input"
-                        id="username"
-                        name="username"
-                        required
-                        minlength="3"
-                        maxlength="12"
-                        aria-errormessage="username-errors"
-                        type="text"
-                        placeholder=" "
-                      />
-                      <label for="username" class="field__label"
-                        >Your Name</label
-                      >
-                      <span
-                        class="field__errors"
-                        id="username-errors"
-                        data-js-form-field-errors
-                      ></span>
-                    </div>
-                    <div class="contacts__form-field-block">
-                      <input
-                        class="field__input"
-                        id="email"
-                        name="email"
-                        required
-                        aria-errormessage="email-errors"
-                        type="email"
-                        placeholder="
-                    "
-                        title="Введите корректный адрес электронной почты"
-                      />
-                      <label for="email" class="field__label">Your Email</label>
-                      <span
-                        class="field__errors"
-                        id="email-errors"
-                        data-js-form-field-errors
-                      ></span>
-                    </div>
-                    <div class="contacts__form-field-block">
-                      <input
-                        class="field__input"
-                        id="url"
-                        name="url"
-                        required
-                        aria-errormessage="url-errors"
-                        type="url"
-                        placeholder=" "
-                        title="Введите корректный URL"
-                      />
-                      <label for="url" class="field__label">Website</label>
-                      <span
-                        class="field__errors"
-                        id="url-errors"
-                        data-js-form-field-errors
-                      ></span>
-                    </div>
-                    <div class="contacts__form-field-block">
-                      <input
-                        class="field__input"
-                        id="project"
-                        name="project"
-                        required
-                        minlength="8"
-                        maxlength="40"
-                        aria-errormessage="project-errors"
-                        type="text"
-                        placeholder=" "
-                      />
-                      <label for="project" class="field__label"
-                        >Tell About Your Project</label
-                      >
-                      <span
-                        class="field__errors"
-                        id="project-errors"
-                        data-js-form-field-errors
-                      ></span>
-                    </div>
+              <form
+                id="contactsForm"
+                action="#"
+                class="contacts__contacts-form contacts-form"
+                method="post"
+                data-js-form
+                novalidate
+              >
+                <div class="contacts__form-body">
+                  <div class="contacts__form-field-block">
+                    <input
+                      class="field__input"
+                      id="username"
+                      name="username"
+                      required
+                      minlength="3"
+                      maxlength="12"
+                      aria-errormessage="username-errors"
+                      type="text"
+                      placeholder=" "
+                    />
+                    <label for="username" class="field__label">Your Name</label>
+                    <span
+                      class="field__errors"
+                      id="username-errors"
+                      data-js-form-field-errors
+                    ></span>
                   </div>
-                  <button class="contacts-form__button button" type="submit">
-                    Submit
-                  </button>
-                </form>
-              </div>
+                  <div class="contacts__form-field-block">
+                    <input
+                      class="field__input"
+                      id="email"
+                      name="email"
+                      required
+                      aria-errormessage="email-errors"
+                      type="email"
+                      placeholder="
+                    "
+                      title="Введите корректный адрес электронной почты"
+                    />
+                    <label for="email" class="field__label">Your Email</label>
+                    <span
+                      class="field__errors"
+                      id="email-errors"
+                      data-js-form-field-errors
+                    ></span>
+                  </div>
+                  <div class="contacts__form-field-block">
+                    <input
+                      class="field__input"
+                      id="url"
+                      name="url"
+                      required
+                      aria-errormessage="url-errors"
+                      type="url"
+                      placeholder=" "
+                      title="Введите корректный URL"
+                    />
+                    <label for="url" class="field__label">Website</label>
+                    <span
+                      class="field__errors"
+                      id="url-errors"
+                      data-js-form-field-errors
+                    ></span>
+                  </div>
+                  <div class="contacts__form-field-block">
+                    <input
+                      class="field__input"
+                      id="project"
+                      name="project"
+                      required
+                      minlength="8"
+                      maxlength="40"
+                      aria-errormessage="project-errors"
+                      type="text"
+                      placeholder=" "
+                    />
+                    <label for="project" class="field__label"
+                      >Tell About Your Project</label
+                    >
+                    <span
+                      class="field__errors"
+                      id="project-errors"
+                      data-js-form-field-errors
+                    ></span>
+                  </div>
+                </div>
+                <button class="contacts-form__button button" type="submit">
+                  Submit
+                </button>
+              </form>
             </div>
           </div>
         </section>
       </main>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./scripts/burger-menu.js" defer></script>
-    <script src="./scripts/validate-form.js" defer></script>
-    <script src="./scripts/slider.js" defer></script>
+    <script src="./scripts/header.js" type="module" defer></script>
+    <script src="./scripts/burger-menu.js" type="module" defer></script>
+    <script src="./scripts/validate-form.js" type="module" defer></script>
+    <script src="./scripts/slider.js" type="module" defer></script>
   </body>
 </html>

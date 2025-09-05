@@ -1,3 +1,5 @@
+export { burgerButton, mobileMenu }
+
 const burgerButton = document.getElementById('burger-button')
 const mobileMenu = document.getElementById('mobile-menu')
 const headerActions = document.getElementById('header-actions')
@@ -21,13 +23,9 @@ const observer = new ResizeObserver(entries => {
 observer.observe(document.body);
 
 if (burgerButton) {
-  burgerButton.addEventListener('click', () => {
-
+  burgerButton.addEventListener('click', e => {
     document.body.classList.toggle('is-lock')
     burgerButton.classList.toggle('is-active')
     mobileMenu.classList.toggle('is-visible')
   })
 }
-
-
-
