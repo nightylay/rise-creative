@@ -175,24 +175,6 @@ a:where([class]) {
 }
 
 /**
-  Приводим к единому цвету svg-элементы
-  (за исключением тех, у которых уже указан
-  атрибут fill со значением 'none' или начинается с 'url')
- */
-:where([fill]:not([fill='none'], [fill^='url'])) {
-  fill: currentColor;
-}
-
-/**
-  Приводим к единому цвету svg-элементы
-  (за исключением тех, у которых уже указан
-  атрибут stroke со значением 'none')
- */
-:where([stroke]:not([stroke='none'], [stroke^='url'])) {
-  stroke: currentColor;
-}
-
-/**
   Чиним баг задержки смены цвета при взаимодействии с svg-элементами
  */
 svg * {
@@ -409,7 +391,8 @@ a {
   transition-duration: var(--transition-duration);
 }
 
-.header__menu-link:hover {
+.header__menu-link:hover,
+.footer__column-link:hover {
   color: #ffffff;
 }
 
@@ -460,6 +443,7 @@ a {
   padding-top: 44px;
   padding-bottom: 62px;
   min-height: calc(100vh - var(--header-height));
+  overflow: hidden;
 }
 
 .hero__content {
@@ -667,7 +651,7 @@ a {
   height: 100%;
   aspect-ratio: 1;
   position: absolute;
-  right: 0;
+  right: -5px;
   background: url('./icons/arrow-right_yellow.svg') left / 40% no-repeat;
 }
 
@@ -985,7 +969,6 @@ a {
   transform: scale(-1);
 }
 
-/* Стили для центрального слайда */
 .swiper-slide.slide-review.centered {
   box-shadow: 0 25px 32px 0 rgba(67, 67, 67, 0.14);
   border-radius: 10px;
@@ -1003,6 +986,11 @@ a {
   height: 20px;
 }
 
+.contacts {
+  background-color: #ffffff;
+  padding-block: 100px;
+}
+
 .contacts__info-subtitle {
   font-size: clamp(24px, 2.36vw, 34px);
   line-height: 1.29;
@@ -1013,19 +1001,27 @@ a {
   margin-bottom: 24px;
 }
 
-.contacts__info-list {
+.contacts-block {
   display: flex;
   flex-direction: column;
   row-gap: 24px;
 }
 
-.contacts__info-item {
+.contacts-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   column-gap: 14px;
 }
 
-.contacts__info-item-text {
+.contacts__item-content.--underline-style {
+  text-decoration-line: underline;
+}
+
+.contacts__item-content.--underline-style:hover {
+  color: #383838;
+}
+
+.contacts-info {
   font-family: var(--font-family-accent);
   font-weight: 500;
   font-size: 14px;
@@ -1041,6 +1037,8 @@ a {
   border-radius: 10px;
   padding: 60px;
   width: 100%;
+  max-width: 616px; /* теперь будет работать */
+  flex-shrink: 0;
 }
 
 .contacts__form-body {
@@ -1086,11 +1084,12 @@ a {
   color: transparent;
 }
 
-.field__input:focus {
+.field__input:focus-visible {
+  outline: none;
   border-bottom: 1.5px solid #ffffff;
 }
 
-.field__input:focus ~ .field__label,
+.field__input:focus-visible ~ .field__label,
 .field__input:not(:placeholder-shown) ~ .field__label {
   top: -25px;
   color: #ffffff;
@@ -1104,10 +1103,6 @@ input:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 
-.field__input:focus {
-  outline: none;
-}
-
 .contacts-form__button {
   padding: 13px 60px;
 }
@@ -1116,6 +1111,107 @@ input:-webkit-autofill:focus {
   font-family: var(--font-family-base);
   color: #f13f6c;
   margin-top: 5px;
+}
+
+.footer {
+  background-color: var(--color-dark-alternate);
+  padding-top: 78px;
+  padding-bottom: 56px;
+}
+
+.footer__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__info-block {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  max-width: 329px;
+}
+
+.footer__column-info {
+  font-family: var(--font-family-accent);
+  line-height: 1.5;
+  color: var(--color-light-alternate);
+  opacity: 0.9;
+}
+
+.footer__column-soc1als-list {
+  display: flex;
+  column-gap: 16px;
+}
+
+.footer__column-soc1als-link:hover svg rect {
+  fill: #daa738; /* Цвет для прямоугольника */
+}
+
+.footer__column-soc1als-link:hover svg path {
+  fill: #ffffff; /* Цвет для иконки (белый на красном фоне) */
+  transition: fill 0.3s ease;
+}
+
+.footer__links-block-body {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.footer__column-title {
+  font-family: var(--font-family-accent);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #ffffff;
+  pointer-events: none;
+}
+
+.footer__column-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 16px;
+}
+
+.footer__column-link {
+  font-family: var(--font-family-accent);
+  font-weight: 500;
+  color: #b3b3b3;
+}
+
+/* Убираем стандартный маркер Chrome */
+.footer__column-title::-webkit-details-marker {
+  display: none;
+}
+/* Убираем стандартный маркер Firefox */
+details > summary {
+  list-style: none;
+}
+
+.footer__contacts-item-icon svg *[fill] {
+  fill: var(--color-yellow);
+}
+
+.footer__contacts-item-content {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #b3b3b3;
+}
+
+.footer__contacts-item-content.--white-color {
+  color: #ffffff;
+}
+
+.footer__contacts-item-content.--white-color:hover {
+  color: var(--color-yellow);
 }
 
 @media (max-width: 1400px) {
@@ -1206,6 +1302,13 @@ input:-webkit-autofill:focus {
   }
 }
 
+@media (max-width: 1240px) {
+  .footer__body {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
 @media (max-width: 1060px) {
   .section__body {
     display: flex;
@@ -1231,6 +1334,10 @@ input:-webkit-autofill:focus {
   .testimonial__info-header:not(:last-child) {
     margin-bottom: 30px;
   }
+
+  .contacts__body {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 890px) {
@@ -1247,7 +1354,7 @@ input:-webkit-autofill:focus {
     height: 100vh;
     overflow: auto;
     z-index: 5;
-    padding: 70px 0px 50px 0px;
+    padding-top: 170px;
   }
 
   .header__menu.is-visible {
@@ -1335,10 +1442,6 @@ input:-webkit-autofill:focus {
   .slide-case {
     max-width: 100%;
   }
-
-  .contacts__body {
-    flex-direction: column;
-  }
 }
 
 @media (max-width: 760px) {
@@ -1362,6 +1465,9 @@ input:-webkit-autofill:focus {
   }
   .cases__info-header {
     margin-bottom: 28px;
+  }
+  .footer__links-block-body {
+    grid-template-columns: repeat(2, auto);
   }
 }
 
@@ -1389,5 +1495,19 @@ input:-webkit-autofill:focus {
   }
   .hero__actions:not(:last-child) {
     margin-bottom: 15px;
+  }
+
+  .footer__links-block-body {
+    grid-template-columns: repeat(1, auto);
+    gap: 25px;
+  }
+  .footer__column {
+    gap: 15px;
+  }
+  .footer__column-title {
+    pointer-events: auto;
+  }
+  .footer {
+    padding-block: 30px;
   }
 }

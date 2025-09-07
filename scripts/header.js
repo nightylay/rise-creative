@@ -4,17 +4,16 @@ const header = document.getElementById('header')
 const mainSection = document.getElementById('main-section')
 const headerHeight = header.offsetHeight
 
-function addFixedClassHeader() {
-  window.addEventListener('scroll', (e) => {
-    if (pageYOffset > mainSection.offsetHeight) {
-      header.classList.add('fixed')
-      document.body.style.paddingTop = header.offsetHeight + "px"
-    } else {
-      header.classList.remove('fixed')
-      document.body.removeAttribute('style');
-    }
-  });
-}
+window.addEventListener('scroll', event => {
+  if (pageYOffset > mainSection.offsetHeight) {
+    header.classList.add('fixed')
+    document.body.style.paddingTop = header.offsetHeight + "px"
+  } else {
+    header.classList.remove('fixed')
+    document.body.removeAttribute('style');
+  }
+});
+
 
 header.addEventListener('click', event => {
   let currentLink = event.target.closest('[data-goto]')
@@ -36,4 +35,3 @@ header.addEventListener('click', event => {
 }, { capture: true })
 
 
-addFixedClassHeader()
