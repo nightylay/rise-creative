@@ -949,7 +949,7 @@ a {
   position: relative;
 }
 
-.slide-review__text:before {
+.slide-review__text p:before {
   content: '';
   display: inline-block;
   width: 28px;
@@ -957,7 +957,7 @@ a {
   background: url('./icons/comment-icon.svg') left/contain no-repeat;
 }
 
-.slide-review__text:after {
+.slide-review__text p:after {
   content: '';
   display: inline-block;
   position: absolute;
