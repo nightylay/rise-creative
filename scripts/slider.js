@@ -1,5 +1,5 @@
-export function initSlider() {
-  var swiperCases = new Swiper(".mySwiper", {
+export function initSliderCases() {
+  const swiperCases = new Swiper(".swiperCases", {
     slidesPerView: 1,
     spaceBetween: 20,
     navigation: {
@@ -13,8 +13,10 @@ export function initSlider() {
       },
     }
   });
+}
 
-  var swiperReviews = new Swiper(".swiperReviews", {
+export function initReviewsCases() {
+  const swiperReviews = new Swiper(".swiperReviews", {
     slidesPerView: 1,
     spaceBetween: 10,
     grabCursor: true,
