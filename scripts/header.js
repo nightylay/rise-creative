@@ -1,37 +1,40 @@
-import { burgerButton, mobileMenu } from "./burger-menu.js";
+import { burgerButtonElement, mobileMenuElement } from "./burger-menu.js";
 
-const header = document.getElementById('header')
+const headerElement = document.getElementById('header')
 const mainSection = document.getElementById('main-section')
-const headerHeight = header.offsetHeight
+const headerHeight = headerElement.offsetHeight
 
-window.addEventListener('scroll', event => {
-  if (pageYOffset > mainSection.offsetHeight) {
-    header.classList.add('fixed')
-    document.body.style.paddingTop = header.offsetHeight + "px"
-  } else {
-    header.classList.remove('fixed')
-    document.body.removeAttribute('style');
-  }
-});
-
-
-header.addEventListener('click', event => {
-  let currentLink = event.target.closest('[data-goto]')
-  if (currentLink && document.querySelector(currentLink.getAttribute('data-goto'))) {
-    let targetSection = document.querySelector(currentLink.getAttribute('data-goto'))
-    let targetSectionScrollTop = targetSection.offsetTop - headerHeight
-    window.scrollTo({
-      top: targetSectionScrollTop,
-      behavior: "smooth"
-    });
-    if (burgerButton.classList.contains('is-active')) {
-      document.body.classList.remove('is-lock')
-      burgerButton.classList.remove('is-active')
-      mobileMenu.classList.remove('is-visible')
+export function setFixedHeader() {
+  window.addEventListener('scroll', event => {
+    if (pageYOffset > mainSection.offsetHeight) {
+      headerElement.classList.add('fixed')
+      document.body.style.paddingTop = headerElement.offsetHeight + "px"
+    } else {
+      headerElement.classList.remove('fixed')
+      document.body.removeAttribute('style');
     }
-    event.preventDefault()
-  }
+  });
+}
 
-}, { capture: true })
+export function anchorLinks() {
+  headerElement.addEventListener('click', event => {
+    let currentLink = event.target.closest('[data-goto]')
+    if (currentLink && document.querySelector(currentLink.getAttribute('data-goto'))) {
+      let targetSection = document.querySelector(currentLink.getAttribute('data-goto'))
+      let targetSectionScrollTop = targetSection.offsetTop - headerHeight
+      window.scrollTo({
+        top: targetSectionScrollTop,
+        behavior: "smooth"
+      });
+      if (burgerButtonElement.classList.contains('is-active')) {
+        document.body.classList.remove('is-lock')
+        burgerButtonElement.classList.remove('is-active')
+        mobileMenuElement.classList.remove('is-visible')
+      }
+      event.preventDefault()
+    }
+
+  }, { capture: true })
+}
 
 

@@ -1,4 +1,4 @@
-class FormsValidation {
+export class FormsValidation {
   selectors = {
     form: '[data-js-form]',
     fieldErrors: '[data-js-form-field-errors]',
@@ -83,4 +83,3 @@ class FormsValidation {
   }
 }
 
-new FormsValidation()
