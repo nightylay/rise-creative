@@ -597,23 +597,23 @@ a {
 }
 
 .hero__partners-container {
-  overflow: hidden; /* Скрываем всё за пределами */
+  overflow: hidden;
   position: relative;
   width: 100%;
 }
 
-.hero__partners-list {
+.hero__partners-slider {
+  display: flex;
+  width: calc(250px * 12);
+  animation: move 30s linear infinite reverse;
+}
+
+.hero__partners-slide {
+  width: 250px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 80px;
-  width: calc(150px * 12);
-  animation: move 28s linear infinite reverse;
-}
-
-.hero__partners-item {
-  width: 150px;
-  height: 100px;
 }
 
 .hero__partner-image *[fill] {
@@ -1536,6 +1536,6 @@ details > summary {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-50% - 40px)); /* 40px = 80px / 2 */
+    transform: translateX(calc(-250px * 6));
   }
 }
