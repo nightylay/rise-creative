@@ -656,7 +656,7 @@ a {
   padding-left: 33px;
 }
 
-.about__info-button.--button-black {
+.button--button-black {
   background-color: var(--color-dark);
   color: var(--color-yellow);
 }
@@ -1028,11 +1028,11 @@ a {
   column-gap: 14px;
 }
 
-.contacts__item-content.--underline-style {
+.link--style-underline {
   text-decoration-line: underline;
 }
 
-.contacts__item-content.--underline-style:hover {
+.link--style-underline:hover {
   color: #383838;
 }
 
@@ -1221,11 +1221,11 @@ details > summary {
   color: #b3b3b3;
 }
 
-.footer__contacts-item-content.--white-color {
+.link--white-color {
   color: #ffffff;
 }
 
-.footer__contacts-item-content.--white-color:hover {
+.link--white-color:hover {
   color: var(--color-yellow);
 }
 
